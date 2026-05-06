@@ -65,4 +65,9 @@ chmod +x Startup_Manager-x86_64.AppImage
 5. Abra um **Pull Request**.
 
 ---
+## 🌍 Localization
+The application is currently available in **Portuguese (Brazil)**.
+- [ ] Implement multi-language support (i18n) - *Planned for future updates.*
+
+---
 *Desenvolvido por [Lu15-F3](https://github.com/Lu15-F3)*
