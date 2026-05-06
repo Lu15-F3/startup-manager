@@ -1,5 +1,9 @@
 # 🚀 Startup Manager (KDE Plasma)
 
+<p align="center">
+  <img src="assets/screenshot.png" alt="Captura de tela do Startup Manager" width="600">
+</p>
+
 O **Startup Manager** é um utilitário leve desenvolvido em Python e PyQt6 para o ecossistema Fedora/KDE. Ele permite gerenciar o atraso (delay) na inicialização de aplicativos, garantindo um carregamento de sistema mais fluido e organizado, evitando que vários apps disputem recursos ao mesmo tempo no boot.
 
 ---
