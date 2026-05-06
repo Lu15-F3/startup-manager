@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Startup Manager
+Comment=Gerencie a inicialização de apps com atraso
+Exec=startup-manager
+Icon=startup-manager-icon
+StartupWMClass=startup-manager
+Terminal=false
+Type=Application
+Categories=Settings;System;Qt;
