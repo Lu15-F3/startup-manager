@@ -10,10 +10,10 @@ O **Startup Manager** é um utilitário leve desenvolvido em Python e PyQt6 para
 
 ## ✨ Funcionalidades
 
-- **⏳ Gestão de Delay**: Define segundos de espera personalizados para qualquer aplicação.
-- **📦 Multi-formato**: Disponível como pacote nativo Fedora (**RPM**) e pacote universal (**AppImage**).
-- **🖥️ Integração Nativa**: Interface desenvolvida em PyQt6 com suporte total ao tema do KDE.
-- **🎨 Ícones Inteligentes**: Identificação correta no painel de tarefas e menu de aplicações (correção de WM_CLASS).
+- **⏳ Gestão de Delay: Define segundos de espera personalizados para qualquer aplicação.
+- **⌨️ Argumentos Personalizados: Suporte para comandos adicionais na inicialização dos apps.
+- **🌍 Interface Bilingue: Deteção automática do idioma do sistema (PT-BR/EN) com opção de troca manual.
+- **📦 Multi-formato: Disponível como pacote nativo Fedora (RPM) e pacote universal (AppImage).
 
 ---
 
@@ -63,11 +63,6 @@ chmod +x Startup_Manager-x86_64.AppImage
 3. Faça o **Commit** das suas alterações (`git commit -m 'Adiciona nova função'`).
 4. Faça o **Push** para a Branch (`git push origin feature/NovaFuncao`).
 5. Abra um **Pull Request**.
-
----
-## 🌍 Localization
-The application is currently available in **Portuguese (Brazil)**.
-- [ ] Implement multi-language support (i18n) - *Planned for future updates.*
 
 ---
 *Desenvolvido por [Lu15-F3](https://github.com/Lu15-F3)*

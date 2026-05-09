@@ -8,7 +8,7 @@ CONFIG_DIR = os.path.expanduser("~/.config/startup_manager")
 AUTOSTART_DIR = os.path.expanduser("~/.config/autostart")
 BIN_DIR = os.path.expanduser("~/.local/bin")
 CONFIG_FILE = os.path.join(CONFIG_DIR, "config.json")
-SCRIPT_PATH = os.path.join(BIN_DIR, "atraso_apps.sh")
+SCRIPT_PATH = os.path.join(BIN_DIR, "startup-launcher.sh")
 DESKTOP_ENTRY = os.path.join(AUTOSTART_DIR, "startup_manager_script.desktop")
 
 def get_installed_apps():
@@ -55,15 +55,19 @@ def get_installed_apps():
 def generate_startup_script(app_list):
     """
     Cria o script bash em ~/.local/bin/ e aplica permissão de execução.
+    app_list agora espera uma lista de tuplas: (comando, delay, argumentos)
     """
     if not os.path.exists(BIN_DIR):
         os.makedirs(BIN_DIR)
     
     content = "#!/bin/bash\n\n# Gerado via Startup Manager\n\n"
-    for cmd, delay in app_list:
+    for cmd, delay, args in app_list:
         if delay > 0:
             content += f"sleep {delay}\n"
-        content += f"{cmd} &\n\n"
+        
+        # Monta o comando com argumentos, se existirem
+        full_command = f"{cmd} {args}".strip()
+        content += f"{full_command} &\n\n"
     
     try:
         with open(SCRIPT_PATH, 'w', encoding='utf-8') as f:
